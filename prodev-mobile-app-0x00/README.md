@@ -1,94 +1,88 @@
-# Welcome to your Expo app 👋
+# Mobile Development Setup - Expo Go
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This document tracks the setup process of **Expo Go** for mobile development.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Steps Followed
 
-   ```bash
-   npm install
-   ```
+### 1. Install Expo Go
+- **Visited**: [https://expo.dev/go](https://expo.dev/go)  
+- **Selected**: Latest SDK version.  
+- **Installed on device**:  
+  - **Android** → [Google Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent)  
+  - **iOS** → [Apple App Store](https://apps.apple.com/app/expo-go/id982107779)  
+- **Opened Expo Go** → Confirmed app is running.  
+- **Account setup** → Created new Expo account (or logged into existing one).  
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### 2. Initialize First Expo Project
+On the development machine:
 
 ```bash
-npm run reset-project
-```
+# Install Expo CLI and create new app
+npx create-expo-app my-first-app
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# Move into project directory
+cd my-first-app
 
-## Learn more
+# Start the Expo development server
+npx expo start
+# Expo First App Setup
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🚀 Steps Followed
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-# 📱 Expo Project Setup
-
-## 🚀 Steps for Scaffolding
-
-1. Initialized a new Expo project using the latest Expo Router template:
-
+1. Initialized a new Expo project with Expo Router:
    ```bash
    npx create-expo-app@latest .
 Modified the Home Screen:
 
-Opened app/(tabs)/index.tsx.
+File: app/(tabs)/index.tsx
 
-Located the default text Welcome!.
-
-Changed it to:
+Changed:
 
 tsx
 Copy
 Edit
-** First App Created**
-Ran and tested the application:
+<Text>Welcome!</Text>
+to
+
+tsx
+Copy
+Edit
+<Text>** First App Created**</Text>
+Ran the development server:
 
 bash
 Copy
 Edit
 npx expo start
-iOS: Scanned the QR code in the terminal using the Camera app.
+Tested on:
 
-Android: Scanned the QR code using the Expo Go app.
+✅ iOS: Camera app scan → Expo Go
 
-🔄 Reset the Application
-Ran the reset command:
+✅ Android: Expo Go app QR scan
+
+Reset the application:
 
 bash
 Copy
 Edit
 npm run reset-project
-✅ Observations
-node_modules/ was removed and dependencies reinstalled.
+🔍 Observations on reset-project
+Cleared cached data and dependencies.
 
-Cache and temporary files were cleared.
+Project reinstalled with fresh node_modules.
 
-Project returned to a clean, fresh state.
+Helpful when dependencies break or changes don’t reflect.
+
+After reset, the app starts as if freshly cloned.
+
+📱 Result
+Home screen now displays:
+
+sql
+Copy
+Edit
+** First App Created**
